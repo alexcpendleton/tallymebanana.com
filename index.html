@@ -17,10 +17,13 @@
       color: #ddca7e
     }
 
-    .player {
-      display: block;
+    .app {
       width: 600px;
       margin: 0 auto;
+    }
+
+    .player {
+      display: block;
     }
 
     .player-name-label {
@@ -50,108 +53,120 @@
       border: solid .75px #ddca7e33;
       padding-left: 5px;
     }
+
+    .about {
+      font-size: 0.6em;
+      text-align: center
+    }
   </style>
 </head>
 
 <body>
-  <ol class="tally">
-    <li class="player">
-      <label class="player-name">
-        <span class="player-name-label">Player 1</span>
-        <input type="text" name="name-value:1" id="name-value:1" class="player-name-value" placeholder="Player 1"
-          tabindex="1" />
-      </label>
-      <label class="score">
-        <span class="score-label">Score</span>
-        <input type="number" name="current-score:1" id="current-score:1" class="current-score" value="0" step="1"
-          tabindex="9" />
-      </label>
-    </li>
-    <li class="player">
-      <label class="player-name">
-        <span class="player-name-label">Player 2</span>
-        <input type="text" name="name-value:1" id="name-value:1" class="player-name-value" placeholder="Player 2"
-          tabindex="2" />
-      </label>
-      <label class="score">
-        <span class="score-label">Score</span>
-        <input type="number" name="current-score:2" id="current-score:2" class="current-score" value="0" step="1"
-          tabindex="10" />
-      </label>
-    </li>
-    <li class="player">
-      <label class="player-name">
-        <span class="player-name-label">Player 3</span>
-        <input type="text" name="name-value:3" id="name-value:3" class="player-name-value" placeholder="Player 3"
-          tabindex="3" />
-      </label>
-      <label class="score">
-        <span class="score-label">Score</span>
-        <input type="number" name="current-score:3" id="current-score:3" class="current-score" value="0" step="1"
-          tabindex="11" />
-      </label>
-    </li>
-    <li class="player">
-      <label class="player-name">
-        <span class="player-name-label">Player 4</span>
-        <input type="text" name="name-value:4" id="name-value:4" class="player-name-value" placeholder="Player 4"
-          tabindex="4" />
-      </label>
-      <label class="score">
-        <span class="score-label">Score</span>
-        <input type="number" name="current-score:4" id="current-score:4" class="current-score" value="0" step="1"
-          tabindex="12" />
-      </label>
-    </li>
-    <li class="player">
-      <label class="player-name">
-        <span class="player-name-label">Player 5</span>
-        <input type="text" name="name-value:5" id="name-value:5" class="player-name-value" placeholder="Player 5"
-          tabindex="5" />
-      </label>
-      <label class="score">
-        <span class="score-label">Score</span>
-        <input type="number" name="current-score:5" id="current-score:5" class="current-score" value="0" step="1"
-          tabindex="13" />
-      </label>
-    </li>
-    <li class="player">
-      <label class="player-name">
-        <span class="player-name-label">Player 6</span>
-        <input type="text" name="name-value:6" id="name-value:6" class="player-name-value" placeholder="Player 6"
-          tabindex="6" />
-      </label>
-      <label class="score">
-        <span class="score-label">Score</span>
-        <input type="number" name="current-score:6" id="current-score:6" class="current-score" value="0" step="1"
-          tabindex="14" />
-      </label>
-    </li>
-    <li class="player">
-      <label class="player-name">
-        <span class="player-name-label">Player 7</span>
-        <input type="text" name="name-value:7" id="name-value:7" class="player-name-value" placeholder="Player 7"
-          tabindex="7" />
-      </label>
-      <label class="score">
-        <span class="score-label">Score</span>
-        <input type="number" name="current-score:7" id="current-score:7" class="current-score" value="0" step="1"
-          tabindex="15" />
-      </label>
-    </li>
-    <li class="player">
-      <label class="player-name">
-        <span class="player-name-label">Player 8</span>
-        <input type="text" name="name-value:8" id="name-value:8" class="player-name-value" placeholder="Player 8"
-          tabindex="8" />
-      </label>
-      <label class="score">
-        <span class="score-label">Score</span>
-        <input type="number" name="current-score:8" id="current-score:8" class="current-score" value="0" step="1"
-          tabindex="16" />
-      </label>
-    </li>
-  </ol>
+  <div class="app">
+    <section class="scores">
+      <ol class="tally">
+        <li class="player">
+          <label class="player-name">
+            <span class="player-name-label">Player 1</span>
+            <input type="text" name="name-value:1" id="name-value:1" class="player-name-value" placeholder="Player 1"
+              tabindex="1" />
+          </label>
+          <label class="score">
+            <span class="score-label">Score</span>
+            <input type="number" name="current-score:1" id="current-score:1" class="current-score" value="0" step="1"
+              tabindex="9" />
+          </label>
+        </li>
+        <li class="player">
+          <label class="player-name">
+            <span class="player-name-label">Player 2</span>
+            <input type="text" name="name-value:1" id="name-value:1" class="player-name-value" placeholder="Player 2"
+              tabindex="2" />
+          </label>
+          <label class="score">
+            <span class="score-label">Score</span>
+            <input type="number" name="current-score:2" id="current-score:2" class="current-score" value="0" step="1"
+              tabindex="10" />
+          </label>
+        </li>
+        <li class="player">
+          <label class="player-name">
+            <span class="player-name-label">Player 3</span>
+            <input type="text" name="name-value:3" id="name-value:3" class="player-name-value" placeholder="Player 3"
+              tabindex="3" />
+          </label>
+          <label class="score">
+            <span class="score-label">Score</span>
+            <input type="number" name="current-score:3" id="current-score:3" class="current-score" value="0" step="1"
+              tabindex="11" />
+          </label>
+        </li>
+        <li class="player">
+          <label class="player-name">
+            <span class="player-name-label">Player 4</span>
+            <input type="text" name="name-value:4" id="name-value:4" class="player-name-value" placeholder="Player 4"
+              tabindex="4" />
+          </label>
+          <label class="score">
+            <span class="score-label">Score</span>
+            <input type="number" name="current-score:4" id="current-score:4" class="current-score" value="0" step="1"
+              tabindex="12" />
+          </label>
+        </li>
+        <li class="player">
+          <label class="player-name">
+            <span class="player-name-label">Player 5</span>
+            <input type="text" name="name-value:5" id="name-value:5" class="player-name-value" placeholder="Player 5"
+              tabindex="5" />
+          </label>
+          <label class="score">
+            <span class="score-label">Score</span>
+            <input type="number" name="current-score:5" id="current-score:5" class="current-score" value="0" step="1"
+              tabindex="13" />
+          </label>
+        </li>
+        <li class="player">
+          <label class="player-name">
+            <span class="player-name-label">Player 6</span>
+            <input type="text" name="name-value:6" id="name-value:6" class="player-name-value" placeholder="Player 6"
+              tabindex="6" />
+          </label>
+          <label class="score">
+            <span class="score-label">Score</span>
+            <input type="number" name="current-score:6" id="current-score:6" class="current-score" value="0" step="1"
+              tabindex="14" />
+          </label>
+        </li>
+        <li class="player">
+          <label class="player-name">
+            <span class="player-name-label">Player 7</span>
+            <input type="text" name="name-value:7" id="name-value:7" class="player-name-value" placeholder="Player 7"
+              tabindex="7" />
+          </label>
+          <label class="score">
+            <span class="score-label">Score</span>
+            <input type="number" name="current-score:7" id="current-score:7" class="current-score" value="0" step="1"
+              tabindex="15" />
+          </label>
+        </li>
+        <li class="player">
+          <label class="player-name">
+            <span class="player-name-label">Player 8</span>
+            <input type="text" name="name-value:8" id="name-value:8" class="player-name-value" placeholder="Player 8"
+              tabindex="8" />
+          </label>
+          <label class="score">
+            <span class="score-label">Score</span>
+            <input type="number" name="current-score:8" id="current-score:8" class="current-score" value="0" step="1"
+              tabindex="16" />
+          </label>
+        </li>
+      </ol>
+    </section>
+    <section class="about">
+      <p>A no-frills score keeper. Enjoy! :)</p>
+    </section>
+  </div>
 </body>
 
 </html>
