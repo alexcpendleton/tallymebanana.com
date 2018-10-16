@@ -5,21 +5,26 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Score keeping with no frills for up to eight players</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Score keeping with no frills for up to eight players." />
   <meta name="keywords" content="Score keeping, tally, wins, loss, keep track" />
   <link rel="shortcut icon" type="image/png" href="/favicon.png" />
   <style type="text/css">
     body {
-      font-size: 32px;
+      font-size: 18px;
       font-family: serif;
       background-color: #1d1e22;
       color: #ddca7e
     }
 
     .app {
-      width: 600px;
+      max-width: 360px;
       margin: 0 auto;
+    }
+
+    .players {
+      margin: 0;
+      padding: 0
     }
 
     .player {
@@ -27,8 +32,10 @@
     }
 
     .player-name-label {
-      width: 22%;
+      width: 80px;
       display: inline-block;
+      text-align: left;
+      padding-right: 0.25em;
     }
 
     .player-name-value {
@@ -41,8 +48,8 @@
     }
 
     .score-label {
-      width: 18%;
-      display: inline-block
+      width: 50px;
+      display: inline-block;
     }
 
     .current-score {
@@ -64,7 +71,7 @@
 <body>
   <div class="app">
     <section class="scores">
-      <ol class="tally">
+      <ol class="players">
         <li class="player">
           <label class="player-name">
             <span class="player-name-label">Player 1</span>
