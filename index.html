@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>No Frills Score Keeping for up to eight players</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    body {
+      font-size: 32px;
+      font-family: serif
+    }
+
+    .player {
+      display: block;
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    .player-name-label {
+      width: 22%;
+      display: inline-block;
+    }
+
+    .player-name-value {
+      width: 28%;
+      font-size: 0.75em;
+    }
+
+    .score-label {
+      width: 18%;
+      display: inline-block
+    }
+
+    .current-score {
+      width: 20%;
+      font-size: 0.75em;
+    }
+  </style>
+</head>
+
+<body>
+  <ol class="tally">
+    <li class="player">
+      <label class="player-name">
+        <span class="player-name-label">Player 1</span>
+        <input type="text" name="name-value:1" id="name-value:1" class="player-name-value" placeholder="Player 1"
+          tabindex="1" />
+      </label>
+      <label class="score">
+        <span class="score-label">Score</span>
+        <input type="number" name="current-score:1" id="current-score:1" class="current-score" value="0" step="1"
+          tabindex="9" />
+      </label>
+    </li>
+    <li class="player">
+      <label class="player-name">
+        <span class="player-name-label">Player 2</span>
+        <input type="text" name="name-value:1" id="name-value:1" class="player-name-value" placeholder="Player 2"
+          tabindex="2" />
+      </label>
+      <label class="score">
+        <span class="score-label">Score</span>
+        <input type="number" name="current-score:2" id="current-score:2" class="current-score" value="0" step="1"
+          tabindex="10" />
+      </label>
+    </li>
+    <li class="player">
+      <label class="player-name">
+        <span class="player-name-label">Player 3</span>
+        <input type="text" name="name-value:3" id="name-value:3" class="player-name-value" placeholder="Player 3"
+          tabindex="3" />
+      </label>
+      <label class="score">
+        <span class="score-label">Score</span>
+        <input type="number" name="current-score:3" id="current-score:3" class="current-score" value="0" step="1"
+          tabindex="11" />
+      </label>
+    </li>
+    <li class="player">
+      <label class="player-name">
+        <span class="player-name-label">Player 4</span>
+        <input type="text" name="name-value:4" id="name-value:4" class="player-name-value" placeholder="Player 4"
+          tabindex="4" />
+      </label>
+      <label class="score">
+        <span class="score-label">Score</span>
+        <input type="number" name="current-score:4" id="current-score:4" class="current-score" value="0" step="1"
+          tabindex="12" />
+      </label>
+    </li>
+    <li class="player">
+      <label class="player-name">
+        <span class="player-name-label">Player 5</span>
+        <input type="text" name="name-value:5" id="name-value:5" class="player-name-value" placeholder="Player 5"
+          tabindex="5" />
+      </label>
+      <label class="score">
+        <span class="score-label">Score</span>
+        <input type="number" name="current-score:5" id="current-score:5" class="current-score" value="0" step="1"
+          tabindex="13" />
+      </label>
+    </li>
+    <li class="player">
+      <label class="player-name">
+        <span class="player-name-label">Player 6</span>
+        <input type="text" name="name-value:6" id="name-value:6" class="player-name-value" placeholder="Player 6"
+          tabindex="6" />
+      </label>
+      <label class="score">
+        <span class="score-label">Score</span>
+        <input type="number" name="current-score:6" id="current-score:6" class="current-score" value="0" step="1"
+          tabindex="14" />
+      </label>
+    </li>
+    <li class="player">
+      <label class="player-name">
+        <span class="player-name-label">Player 7</span>
+        <input type="text" name="name-value:7" id="name-value:7" class="player-name-value" placeholder="Player 7"
+          tabindex="7" />
+      </label>
+      <label class="score">
+        <span class="score-label">Score</span>
+        <input type="number" name="current-score:7" id="current-score:7" class="current-score" value="0" step="1"
+          tabindex="15" />
+      </label>
+    </li>
+    <li class="player">
+      <label class="player-name">
+        <span class="player-name-label">Player 8</span>
+        <input type="text" name="name-value:8" id="name-value:8" class="player-name-value" placeholder="Player 8"
+          tabindex="8" />
+      </label>
+      <label class="score">
+        <span class="score-label">Score</span>
+        <input type="number" name="current-score:8" id="current-score:8" class="current-score" value="0" step="1"
+          tabindex="16" />
+      </label>
+    </li>
+  </ol>
+</body>
+
+</html>
