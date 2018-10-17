@@ -14,7 +14,8 @@
       font-size: 18px;
       font-family: serif;
       background-color: #1d1e22;
-      color: #ddca7e
+      color: #ddca7e;
+      margin: 8px;
     }
 
     .app {
@@ -24,46 +25,75 @@
 
     .players {
       margin: 0;
-      padding: 0
+      padding: 0;
     }
 
     .player {
-      display: block;
+      display: grid;
+      margin: 0 0 .33em 0;
+      grid-template-areas: "namelabel namevalue scorelabel spindown scorevalue spinup";
+      grid-template-columns: 110px 90px 60px 20px 40px 20px;
+      grid-template-rows: 20px;
     }
 
     .player-name-label {
-      width: 80px;
-      display: inline-block;
       text-align: left;
-      padding-right: 0.25em;
+      vertical-align: top;
+      line-height: 1em;
     }
 
     .player-name-value {
-      width: 28%;
       font-size: 0.75em;
       background-color: #34363F;
       color: #ddca7e;
       border: solid 1px #ddca7e33;
-      padding-left: 5px
     }
 
     .score-label {
       width: 50px;
-      display: inline-block;
+      grid-area: "scorelabel";
+      margin-left: 10px;
+      vertical-align: top;
+      line-height: 1em;
+    }
+
+
+    .increase,
+    .decrease {
+      height: 20px;
+      width: 100%;
+      background: #ddca7e;
+      color: #34363F;
+      border: solid 1px #ddca7e33;
+      border-radius: 0px;
+      padding: 0;
+      text-align: center;
+      cursor: pointer;
+      line-height: 0;
     }
 
     .current-score {
-      width: 20%;
+      width: 100%;
       font-size: 0.75em;
       background-color: #34363F;
       color: #ddca7e;
-      border: solid .75px #ddca7e33;
-      padding-left: 5px;
+      border: solid 1px #ddca7e33;
+      height: auto;
+      text-align: center;
+      -moz-appearance: textfield;
+      padding: 0;
+      margin: 0;
     }
 
     .about {
       font-size: 0.6em;
       text-align: center
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
   </style>
 </head>
@@ -73,100 +103,68 @@
     <section class="scores">
       <ol class="players">
         <li class="player">
-          <label class="player-name">
-            <span class="player-name-label">Player 1</span>
-            <input type="text" name="name-value:1" id="name-value:1" class="player-name-value" placeholder="Player 1"
-              tabindex="1" />
-          </label>
-          <label class="score">
-            <span class="score-label">Score</span>
-            <input type="number" name="current-score:1" id="current-score:1" class="current-score" value="0" step="1"
-              tabindex="9" />
-          </label>
+          <label class="player-name player-name-label">Player Name</label>
+          <input type="text" class="player-name-value" placeholder="Player 1" />
+          <label class="score-label">Score</label>
+          <button class="decrease" onclick="decrease('current-score:1')" name="decrease:1">-</button>
+          <input type="number" name="current-score:1" id="current-score:1" class="current-score" value="0" step="1" />
+          <button class="increase" onclick="increase('current-score:1')" name="increase:1">+</button>
         </li>
         <li class="player">
-          <label class="player-name">
-            <span class="player-name-label">Player 2</span>
-            <input type="text" name="name-value:1" id="name-value:1" class="player-name-value" placeholder="Player 2"
-              tabindex="2" />
-          </label>
-          <label class="score">
-            <span class="score-label">Score</span>
-            <input type="number" name="current-score:2" id="current-score:2" class="current-score" value="0" step="1"
-              tabindex="10" />
-          </label>
+          <label class="player-name player-name-label">Player Name</label>
+          <input type="text" class="player-name-value" placeholder="Player 2" />
+          <label class="score-label">Score</label>
+          <button class="decrease" onclick="decrease('current-score:2')" name="decrease:2">-</button>
+          <input type="number" name="current-score:2" id="current-score:2" class="current-score" value="0" step="1" />
+          <button class="increase" onclick="increase('current-score:2')" name="increase:2">+</button>
         </li>
         <li class="player">
-          <label class="player-name">
-            <span class="player-name-label">Player 3</span>
-            <input type="text" name="name-value:3" id="name-value:3" class="player-name-value" placeholder="Player 3"
-              tabindex="3" />
-          </label>
-          <label class="score">
-            <span class="score-label">Score</span>
-            <input type="number" name="current-score:3" id="current-score:3" class="current-score" value="0" step="1"
-              tabindex="11" />
-          </label>
+          <label class="player-name player-name-label">Player Name</label>
+          <input type="text" class="player-name-value" placeholder="Player 3" />
+          <label class="score-label">Score</label>
+          <button class="decrease" onclick="decrease('current-score:3')" name="decrease:3">-</button>
+          <input type="number" name="current-score:3" id="current-score:3" class="current-score" value="0" step="1" />
+          <button class="increase" onclick="increase('current-score:3')" name="increase:3">+</button>
         </li>
         <li class="player">
-          <label class="player-name">
-            <span class="player-name-label">Player 4</span>
-            <input type="text" name="name-value:4" id="name-value:4" class="player-name-value" placeholder="Player 4"
-              tabindex="4" />
-          </label>
-          <label class="score">
-            <span class="score-label">Score</span>
-            <input type="number" name="current-score:4" id="current-score:4" class="current-score" value="0" step="1"
-              tabindex="12" />
-          </label>
+          <label class="player-name player-name-label">Player Name</label>
+          <input type="text" class="player-name-value" placeholder="Player 4" />
+          <label class="score-label">Score</label>
+          <button class="decrease" onclick="decrease('current-score:4')" name="decrease:4">-</button>
+          <input type="number" name="current-score:4" id="current-score:4" class="current-score" value="0" step="1" />
+          <button class="increase" onclick="increase('current-score:4')" name="increase:4">+</button>
         </li>
         <li class="player">
-          <label class="player-name">
-            <span class="player-name-label">Player 5</span>
-            <input type="text" name="name-value:5" id="name-value:5" class="player-name-value" placeholder="Player 5"
-              tabindex="5" />
-          </label>
-          <label class="score">
-            <span class="score-label">Score</span>
-            <input type="number" name="current-score:5" id="current-score:5" class="current-score" value="0" step="1"
-              tabindex="13" />
-          </label>
+          <label class="player-name player-name-label">Player Name</label>
+          <input type="text" class="player-name-value" placeholder="Player 5" />
+          <label class="score-label">Score</label>
+          <button class="decrease" onclick="decrease('current-score:5')" name="decrease:5">-</button>
+          <input type="number" name="current-score:5" id="current-score:5" class="current-score" value="0" step="1" />
+          <button class="increase" onclick="increase('current-score:5')" name="increase:5">+</button>
         </li>
         <li class="player">
-          <label class="player-name">
-            <span class="player-name-label">Player 6</span>
-            <input type="text" name="name-value:6" id="name-value:6" class="player-name-value" placeholder="Player 6"
-              tabindex="6" />
-          </label>
-          <label class="score">
-            <span class="score-label">Score</span>
-            <input type="number" name="current-score:6" id="current-score:6" class="current-score" value="0" step="1"
-              tabindex="14" />
-          </label>
+          <label class="player-name player-name-label">Player Name</label>
+          <input type="text" class="player-name-value" placeholder="Player 6" />
+          <label class="score-label">Score</label>
+          <button class="decrease" onclick="decrease('current-score:6')" name="decrease:6">-</button>
+          <input type="number" name="current-score:6" id="current-score:6" class="current-score" value="0" step="1" />
+          <button class="increase" onclick="increase('current-score:6')" name="increase:6">+</button>
         </li>
         <li class="player">
-          <label class="player-name">
-            <span class="player-name-label">Player 7</span>
-            <input type="text" name="name-value:7" id="name-value:7" class="player-name-value" placeholder="Player 7"
-              tabindex="7" />
-          </label>
-          <label class="score">
-            <span class="score-label">Score</span>
-            <input type="number" name="current-score:7" id="current-score:7" class="current-score" value="0" step="1"
-              tabindex="15" />
-          </label>
+          <label class="player-name player-name-label">Player Name</label>
+          <input type="text" class="player-name-value" placeholder="Player 7" />
+          <label class="score-label">Score</label>
+          <button class="decrease" onclick="decrease('current-score:7')" name="decrease:7">-</button>
+          <input type="number" name="current-score:7" id="current-score:7" class="current-score" value="0" step="1" />
+          <button class="increase" onclick="increase('current-score:7')" name="increase:7">+</button>
         </li>
         <li class="player">
-          <label class="player-name">
-            <span class="player-name-label">Player 8</span>
-            <input type="text" name="name-value:8" id="name-value:8" class="player-name-value" placeholder="Player 8"
-              tabindex="8" />
-          </label>
-          <label class="score">
-            <span class="score-label">Score</span>
-            <input type="number" name="current-score:8" id="current-score:8" class="current-score" value="0" step="1"
-              tabindex="16" />
-          </label>
+          <label class="player-name player-name-label">Player Name</label>
+          <input type="text" class="player-name-value" placeholder="Player 8" />
+          <label class="score-label">Score</label>
+          <button class="decrease" onclick="decrease('current-score:8')" name="decrease:8">-</button>
+          <input type="number" name="current-score:8" id="current-score:8" class="current-score" value="0" step="1" />
+          <button class="increase" onclick="increase('current-score:8')" name="increase:8">+</button>
         </li>
       </ol>
     </section>
@@ -174,6 +172,20 @@
       <p>A no-frills score keeper. Enjoy! :)</p>
     </section>
   </div>
+  <script type="text/javascript">
+    function increase(target) {
+      var input = document.getElementById(target);
+      if (input && input.stepUp) {
+        input.stepUp()
+      }
+    }
+    function decrease(target) {
+      var input = document.getElementById(target);
+      if (input && input.stepDown) {
+        input.stepDown()
+      }
+    }
+  </script>
 </body>
 
 </html>
