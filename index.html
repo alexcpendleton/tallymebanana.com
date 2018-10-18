@@ -46,7 +46,7 @@
       font-size: 0.75em;
       background-color: #34363F;
       color: #ddca7e;
-      border: solid 1px #ddca7e33;
+      border: solid 1px #555444;
     }
 
     .score-label {
@@ -64,7 +64,7 @@
       width: 100%;
       background: #ddca7e;
       color: #34363F;
-      border: solid 1px #ddca7e33;
+      border: solid 1px #555444;
       border-radius: 0px;
       padding: 0;
       text-align: center;
@@ -77,7 +77,7 @@
       font-size: 0.75em;
       background-color: #34363F;
       color: #ddca7e;
-      border: solid 1px #ddca7e33;
+      border: solid 1px #555444;
       height: auto;
       text-align: center;
       -moz-appearance: textfield;
@@ -185,8 +185,8 @@
       if (input && input.stepUp) {
         try {
           input.stepUp();
-        } catch {
-          input.value = input.value + parseInt(input.step, 10);
+        } catch (ex) {
+          input.value = parseInt(input.value, 10) + parseInt(input.step, 10);
         }
       }
     }
@@ -194,8 +194,8 @@
       if (input && input.stepDown) {
         try {
           input.stepDown();
-        } catch {
-          input.value = input.value - parseInt(input.step, 10);
+        } catch (ex) {
+          input.value = parseInt(input.value, 10) - parseInt(input.step, 10);
         }
       }
     }
