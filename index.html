@@ -175,14 +175,28 @@
   <script type="text/javascript">
     function increase(target) {
       var input = document.getElementById(target);
-      if (input && input.stepUp) {
-        input.stepUp()
-      }
+      stepUp(input);
     }
     function decrease(target) {
       var input = document.getElementById(target);
+      stepDown(input);
+    }
+    function stepUp(input) {
+      if (input && input.stepUp) {
+        try {
+          input.stepUp();
+        } catch {
+          input.value = input.value + parseInt(input.step, 10);
+        }
+      }
+    }
+    function stepDown(input) {
       if (input && input.stepDown) {
-        input.stepDown()
+        try {
+          input.stepDown();
+        } catch {
+          input.value = input.value - parseInt(input.step, 10);
+        }
       }
     }
   </script>
